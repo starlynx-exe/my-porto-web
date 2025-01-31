@@ -1,0 +1,85 @@
+body {
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#profil-img {
+  width: 150px;
+  height: 150px;
+}
+
+#code-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#home {
+  margin-left: 11px;
+}
+
+.btn {
+  padding-left: 0px;
+  border: none;
+}
+
+.typing-container {
+  text-align: center;
+  width: 300px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.typing-text {
+  display: inline-block;
+  border-right: 2px solid rgb(0, 0, 0); /* Garis */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animasi blink hanya aktif saat ada kelas 'blink' */
+.typing-text.blink {
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(0, 0, 0);
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Custom CSS untuk dark mode */
+[data-bs-theme="dark"] body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] #bold {
+  filter: brightness(10) contrast(1);
+}
+
+[data-bs-theme="dark"] svg {
+  filter: brightness(0) contrast(1);
+}
+
+[data-bs-theme="dark"] .vr {
+  filter: brightness(0) contrast(1);
+}
